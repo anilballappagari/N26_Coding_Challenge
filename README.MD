@@ -13,3 +13,4 @@ Brief intro on how and behavior of the Application
 		5) The PerformRemove worker thread picks any completed transaction and looks for expired transactions. If expired it perform 			calculations to remove from statistics.
 4) Each worker thread runs at an interval 1 second
 5) The output will be to near-perfect.
+6) I haven't used any In-Memory solutions like Hazelcast, ehcache as List and Map would suffice this requirement as we would be clearing the expired transactions every second.
