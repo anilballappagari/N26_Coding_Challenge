@@ -74,8 +74,8 @@ public class CalculateStatistics {
 		output.setCount(output.getCount() + 1);
 		output.setMin(TransactionStore.getMinAmount());
 		output.setMax(TransactionStore.getMaxAmount());
-		output.setSum(Math.round((output.getSum() + amount) * 100) / 100);
-		output.setAvg(Math.round((output.getSum() / output.getCount()) * 100) / 100);
+		output.setSum((double) Math.round((output.getSum() + amount) * 100) / 100);
+		output.setAvg((double) Math.round((output.getSum() / output.getCount()) * 100) / 100);
 	}
 
 	/**
@@ -88,8 +88,8 @@ public class CalculateStatistics {
 			output.setMin(TransactionStore.getMinAmount());
 			output.setMax(TransactionStore.getMaxAmount());
 			if (output.getCount() > 0) {
-				output.setSum(Math.round((output.getSum() - amount) * 100) / 100);
-				output.setAvg(Math.round((output.getSum() / output.getCount()) * 100) / 100);
+				output.setSum((double) Math.round((output.getSum() - amount) * 100) / 100);
+				output.setAvg((double) Math.round((output.getSum() / output.getCount()) * 100) / 100);
 			} else {
 				output.setAvg(0);
 				output.setSum(0);
